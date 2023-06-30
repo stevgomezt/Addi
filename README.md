@@ -1,5 +1,5 @@
 # Addi
-Creamos un entorno con python 3.11.1, e instalamos las dependencias necesarias.
+Creamos un entorno con python 3.11.4, e instalamos las dependencias necesarias.
 
     $   conda create -n myenvapp1
     $   conda activate myenvapp1

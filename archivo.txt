@@ -1,0 +1,16 @@
+11:03:48 30/06/2023 - En la columna NIT9 se encontraron 7 registros con campos vacios en las filas: 24,25,26,27,28,29,30.
+ 
+11:03:48 30/06/2023 - En la columna RANGOCONSUMO se encontraron 7 registros con campos vacios en las filas: 1,2,3,4,5,6,7.
+ 
+11:03:48 30/06/2023 - En la columna RANGODECOMPRA($) se encontraron 4 registros con campos vacios en las filas: 17,18,19,20.
+ 
+11:03:48 30/06/2023 - En la columna RANGORECURRENCIACOMPRA se encontraron 6 registros con campos vacios en las filas: 7,8,9,10,11,12.
+ 
+11:03:48 30/06/2023 - En la columna TIPOCLIENTE#OPORTUNIDADES se encontraron 5 registros con campos vacios en las filas: 31,32,33,34,35.
+ 
+11:03:48 30/06/2023 - En la columna CATEGORIZACIONSECTORES se encontraron 7 registros con campos vacios en las filas: 23,24,25,26,27,28,29.
+ 
+11:03:48 30/06/2023 - En la columna TAMANOEMPRESA se encontraron 14 registros con campos vacios en las filas: 19,20,21,22,23,24,25,26,27,28,29,30,31,32.
+ 
+11:03:48 30/06/2023 - En la columna CATEGORIADEPARTAMENTO se encontraron 14 registros con campos vacios en las filas: 22,23,24,25,26,27,28,29,30,31,32,33,34,35.
+ 

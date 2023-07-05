@@ -177,13 +177,48 @@ def download_button(object_to_download, download_filename, button_text, pickle_i
     button_id = re.sub('\d+', '', button_uuid)
 
     custom_css = f""" 
-        <style>
+<style>
             #{button_id} {{
                 display: inline-flex;
                 -webkit-box-align: center;
                 align-items: center;
                 -webkit-box-pack: center;
                 justify-content: center;
+                padding: 0.25rem 2.75rem;
+                margin: 0px;
+                line-height: 1.6;
+                user-select: none;
+                background-color: #091a42;
+                color: white;
+                border: none;
+                font-weight: bold !important;
+                height: 35px;
+                width: 236px;
+                border-radius: 50px;
+                text-decoration: none;
+            }}
+            #{button_id}:active {{
+                color: white;
+                border-color: none;
+                background-color: #4d7eff;
+                text-decoration: none;
+            }}
+            #{button_id}:focus:not(:active) {{
+                color: white;
+                border-color: none;
+                background-color: #4d7eff;
+                text-decoration: none;
+            }}
+            #{button_id}:focus {{
+                box-shadow: none;
+                outline: none;
+                text-decoration: none;
+            }}
+            #{button_id}:hover {{
+                background-color: #4d7eff;
+                color: white;
+                border: none;
+                text-decoration: none;
             }}
         </style> """
 
@@ -486,19 +521,31 @@ def main():
     b=False
     vista1,vista2,vista3 = st.tabs(["Resultado múltiples clientes", "Reporte descriptivo", "Resultado modelo unitario"]) #'Inicio', vista0,
 
-    
     # Menú y logo
-    # st.sidebar.image("img/enelX_logo_negative-resize.png", width=200)
-    st.sidebar.write("")
+    # st.sidebar.image("img/add.png", width=200)
+    st.sidebar.markdown("""
+    <style>
+        .logo {
+            color: white;
+            font-size: 66px;
+            font-family: Mallory;
+            letter-spacing: -6px;
+            font-weight: 500;
+        }
+    </style>
+
+    <div class="logo">Addi</div>
+    
+    """, unsafe_allow_html=True)
 
     #Estilo botón
-    st.markdown("""
-            <style>
-            div.stButton > button:hover {
-                background-color:#f0f2f6;
-                color:#461e7d
-            }
-            </style>""", unsafe_allow_html=True)
+    # st.markdown("""
+    #         <style>
+    #         div.stButton > button:hover {
+    #             background-color:#f0f2f6;
+    #             color:#461e7d
+    #         }
+    #         </style>""", unsafe_allow_html=True)
 
     #a, b, c = False, False, False
      
@@ -748,7 +795,7 @@ def main():
                 # # Título con tamaño y color configurables
                 tamaño1 = 30  # Tamaño1 del título
                 tamaño2 = 60  # Tamaño2 del título
-                color1 = '#54278f'#'#54278f#'#461e7d'  # Color del título en formato hexadecimal 
+                color1 = '#4d7eff'  #54278f#'#461e7d'  # Color del título en formato hexadecimal 
                 color2 = '#9e9ac8'
 
                 texto1 = 'Total clientes analizados'#+'\n'+str(len(Xf))

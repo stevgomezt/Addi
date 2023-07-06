@@ -412,7 +412,7 @@ def dona_plotly(df_prob_prod,producto = 'INSTALACIONES', col=None ,titulo=None, 
                                             'text': titulo,
                                             'y': 0.95,
                                             'yanchor': 'top',
-                                            'font': {'size': 24} 
+                                            'font': {'color':'#091a42','size': 24} 
                                     }
                                 )
                     
@@ -563,6 +563,8 @@ def main():
         """,
         unsafe_allow_html=True
     )
+    
+    
      
     with st.sidebar.expander("MODELO CRV", expanded = False):
 
@@ -645,6 +647,20 @@ def main():
         
         except UnboundLocalError:
             st.warning('Error. Problemas con caracteristicas del archivo.')
+    
+    container00 = st.sidebar.container()
+    container00.markdown(
+        """
+        <style>
+        .custom-container {
+            background-color: #9e9ac8;
+            padding: 2.5px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    container00.markdown(f'<div><img src="https://5471282.fs1.hubspotusercontent-na1.net/hubfs/5471282/new_addi_images/logo-sic-footer@2x.png" alt="logo-sic-footer" style="width:100%; max-width:162px;"></div>', unsafe_allow_html=True)
 
 # =============================================================================
 #     with st.sidebar.expander("MODELO UNITARIO ", expanded = False):

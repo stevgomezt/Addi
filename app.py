@@ -30,6 +30,11 @@ app = Flask(__name__)
 # Configure this environment variable via app.yaml
 # CLOUD_STORAGE_BUCKET = os.environ['CLOUD_STORAGE_BUCKET']
 
+
+
+# Configura la página y desactiva la actualización automática
+# st.set_page_config(update_title_bar=False)
+
 @app.route('/')
 def index() -> str:
     return """
@@ -982,7 +987,7 @@ def main():
                     # st.write("")
                     col1,col2,col3 = st.columns(spec=[1,5,1]) #
 
-                    col2.subheader("Rango de compra")
+                    col2.subheader("Clasificación cliente")
  
                     # Configuraciones de los gráficos
                     configuraciones = [
@@ -994,11 +999,11 @@ def main():
                             # 'chart_title': 'Gráfico 1 Ventas/Rango de Compra($)',
                             'col': col2,
                             'order': ['SINCATALOGAR', 'NOCOMPRADOR', 'PEQUENOCOMPRADOR', 'MEDIANOCOMPRADOR', 'GRANCOMPRADOR', 'COMPRADORMEGAPROYECTOS'],  # Orden deseado de las categorías
-                            'order_f':['Sin catalogar','No comprador','Pequeno comprador','Mediano comprador','Gran comprador', 'Comprador megaproyectos']
+                            'order_f':['Sin catalogar','Pequeno comprador','Mediano comprador','Gran comprador', 'Mega comprador','No comprador']
                         }]
                     generar_graficos(df_t, configuraciones,color =1)   
 
-                    col2.subheader("Rango de recurrencia de compra")    
+                    col2.subheader("Cantidad de productos")    
                     configuraciones = [
                         {
                             'groupby': 'RANGORECURRENCIACOMPRA',
@@ -1008,11 +1013,12 @@ def main():
                             # 'chart_title': 'Gráfico 2 RangoRecurrenciaCompra',
                             'col': col2,
                             'order': ['SINCATALOGAR', 'NOCOMPRADOR', 'UNICACOMPRA', 'BAJARECURRENCIA', 'RECURRENCIAMEDIA', 'GRANRECURRENCIA'],  # Orden deseado de las categorías
-                            'order_f':['Sin catalogar', 'No comprador','Unica compra','Baja recurrencia','Recurrencia media','Gran recurrencia']                   
+                            'order_f':['Sin catalogar', 'Un producto','Dos productos','Tres productos' ,'Cuatro productos','Más de cuatro productos']
+                            #'order_f':['Sin catalogar', 'No comprador','Unica compra','Baja recurrencia','Recurrencia media','Gran recurrencia']                   
                         }]
                     generar_graficos(df_t, configuraciones,color =2)
 
-                    col2.subheader("Tipo de cliente por numero de oportunidades")
+                    col2.subheader("Frecuencia de tiempos de compra")
                     configuraciones = [
                         {
                             'groupby': 'TIPOCLIENTE#OPORTUNIDADES',
@@ -1023,12 +1029,16 @@ def main():
                             'col': col2,
                             'order':['SINCATALOGAR', 'NICOMPRA-NICOTIZA', 'SOLOCOTIZAN', 'COTIZANMASDELOQUECOMPRAN', 
                                     'COMPRANYCOTIZAN', 'COMPRANMASDELOQUECOTIZAN', 'SIEMPRECOMPRAN'],  # Orden deseado de las categorías
-                            'order_f':['Sin catalogar','Ni compra - ni cotiza','Solo cotizan','Cotizan mas de lo que compran',
-                                       'Compran y cotizan','Compran  mas de lo que cotizan', 'Siempre compran'],
+                            'order_f':['Sin catalogar','Entre 0 y 30 días','Entre 31 y 60 días','Entre 61 y 90 días',
+                                       'Entre 91 y 180 días','Entre a 181 y 365 días', 'Mayores a 365 días'],
+
+                           
+                            # 'order_f':['Sin catalogar','Ni compra - ni cotiza','Solo cotizan','Cotizan mas de lo que compran',
+                            #            'Compran y cotizan','Compran  mas de lo que cotizan', 'Siempre compran'],
                         }]
                     generar_graficos(df_t, configuraciones,color =3)
 
-                    col2.subheader("Tipo de cliente por valor de oportunidades")
+                    col2.subheader("Valor de compra")
                     configuraciones = [
                         {
                             'groupby': 'TIPOCLIENTE$OPORTUNIDADES',
@@ -1039,8 +1049,8 @@ def main():
                             'col': col2,
                             'order':['SINCATALOGAR', 'NICOMPRA-NICOTIZA', 'SOLOCOTIZAN', 'COTIZANMASDELOQUECOMPRAN', 
                                     'COMPRANYCOTIZAN', 'COMPRANMASDELOQUECOTIZAN', 'SIEMPRECOMPRAN'],
-                            'order_f':['Sin catalogar','Ni compra - ni cotiza','Solo cotizan','Cotizan mas de lo que compran',
-                                       'Compran y cotizan','Compran  mas de lo que cotizan', 'Siempre compran']   # Orden deseado de las categorías
+                            'order_f':['Sin catalogar','Menos a 100 mil','Entre 100 mil y 200 mil','Entre 200 mil y 500 mil',
+                                       'Entre 500 mil y 8 mil','Entre 800 mil y 1.2 M', 'Mayor a 1.2 M']   # Orden deseado de las categorías
                         }]
                     generar_graficos(df_t, configuraciones,color =4)
 

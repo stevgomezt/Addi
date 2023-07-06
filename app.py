@@ -811,7 +811,7 @@ def main():
                 # # Título con tamaño y color configurables
                 tamaño1 = 30  # Tamaño1 del título
                 tamaño2 = 60  # Tamaño2 del título
-                color1 = '#4d7eff'  #54278f#'#461e7d'  # Color del título en formato hexadecimal 
+                color1 = '#f8baad'  #54278f #'#461e7d'  # Color del título en formato hexadecimal 
                 color2 = '#9e9ac8'
 
                 texto1 = 'Total clientes analizados'#+'\n'+str(len(Xf))

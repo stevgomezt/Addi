@@ -58,7 +58,7 @@ ul {
 }
 
 .st-dr {
-  height: 0.155rem;
+  height: 0.125rem;
 }
 
 .st-cq {
@@ -239,4 +239,8 @@ h3 {
   max-width: initial;
   padding: 0rem 0rem;
   width: 100%;
+}
+
+.st-du {
+  background-color: #efc800;
 }

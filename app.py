@@ -660,7 +660,21 @@ def main():
         """,
         unsafe_allow_html=True
     )
-    container00.markdown(f'<div><img src="https://5471282.fs1.hubspotusercontent-na1.net/hubfs/5471282/new_addi_images/logo-sic-footer@2x.png" alt="logo-sic-footer" style="width:100%; max-width:162px;"></div>', unsafe_allow_html=True)
+    container00.markdown(f'<div><img src="https://5471282.fs1.hubspotusercontent-na1.net/hubfs/5471282/new_addi_images/logo-sic-footer@2x.png" alt="logo-sic-footer" style="width:100%; max-width:220px;"></div>', unsafe_allow_html=True)
+
+    # container01 = st.sidebar.container()
+    # container01.markdown(
+    #     """
+    #     <style>
+    #     .custom-container {
+    #         background-color: #9e9ac8;
+    #         padding: 2.5px;
+    #     }
+    #     </style>
+    #     """,
+    #     unsafe_allow_html=True
+    # )
+    # container01.markdown(f'<div><img src="https://5471282.fs1.hubspotusercontent-na1.net/hubfs/5471282/new_addi_images/logo-sic-footer@2x.png" alt="logo-sic-footer" style="width:100%; max-width:220px;"></div>', unsafe_allow_html=True)
 
 # =============================================================================
 #     with st.sidebar.expander("MODELO UNITARIO ", expanded = False):

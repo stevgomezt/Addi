@@ -4,19 +4,12 @@ footer {
   visibility: hidden;
 }
 
-@font-face {
-  font-family: "Mallory";
-  src: url("/fonts/MalloryBlack.ttf") format("ttf"),
-    url("/fonts/MalloryBold.ttf") format("ttf"),
-    url("/fonts/MalloryBlack.ttf") format("truetype");
-
-  /* Add additional font formats if available */
-  /* Specify other font properties if desired */
-}
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Roboto&display=swap");
 
 /* Inicio font pagina */
 .css-nsuj5j {
-  font-family: "Mallory";
+  font-family: "Roboto", sans-serif;
 }
 /* Fin font pagina */
 
@@ -207,7 +200,7 @@ h3 {
   overflow: auto;
   -webkit-box-align: center;
   align-items: center;
-  background-color: #f0ffff40;
+  /* background-color: #f0ffff40; */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -220,3 +213,26 @@ h3 {
 /* .st-de:hover {
   color: #4d7eff;
 } */
+
+.css-qcqlej {
+  width: 100%;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.css-z5fcl4 {
+  width: 100%;
+  padding: 4rem 2rem 2rem 2rem;
+  min-width: auto;
+  max-width: initial;
+}
+
+.css-1kfsq69 {
+  color: rgba(70, 30, 125, 0.4);
+  font-size: 14px;
+  height: 2.5rem;
+  min-width: auto;
+  max-width: initial;
+  padding: 0rem 0rem;
+  width: 100%;
+}

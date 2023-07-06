@@ -511,7 +511,8 @@ def main():
 
     # Variable que controla la visibilidad de la imagen
     b=False
-    vista2,vista1 = st.tabs(["Reporte descriptivo", "Resultado modelo CRV"]) #'Inicio', vista0,
+    # vista2,vista1 = st.tabs(["Reporte descriptivo", "Resultado modelo CRV"]) #'Inicio', vista0,
+    vista1,vista2 = st.tabs(["Resultado modelo CRV", "Reporte descriptivo"]) #'Inicio', vista0,
 
     # Menú y logo
     # st.sidebar.image("img/add.png", width=200)

@@ -517,20 +517,34 @@ def main():
     # Menú y logo
     # st.sidebar.image("img/add.png", width=200)
 
-    st.sidebar.markdown("""
-    <style>
-        .logo {
-            color: white;
-            font-size: 66px;
-            font-family: 'Handlee', cursive;
-            letter-spacing: -6px;
-            font-weight: 500;
-        }
-    </style>
+    # st.sidebar.markdown("""
+    # <style>
+    #     .logo {
+    #         color: white;
+    #         font-size: 66px;
+    #         font-family: 'Handlee', cursive;
+    #         letter-spacing: -6px;
+    #         font-weight: 500;
+    #     }
+    # </style>
 
-    <div class="logo">Addi</div>
+    # <div class="logo">Addi</div>
     
-    """, unsafe_allow_html=True)
+    # """, unsafe_allow_html=True)
+
+    container01 = st.sidebar.container()
+    container01.markdown(
+        """
+        <style>
+        .custom-container {
+            background-color: #9e9ac8;
+            padding: 2.5px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    container01.markdown(f'<div style="width: 130px;height: 100%;aspect-ratio: 16 / 8.1;border-radius: 12px;background-color: #ebf1ff;background-repeat: no-repeat;background-size: cover;background-position: center center;box-shadow: rgba(86, 90, 97, 0.12) 0px 4px 12px;margin-bottom: 21px;"><img src="https://5471282.fs1.hubspotusercontent-na1.net/hubfs/5471282/addi-logo.svg" class="hs-image-widget " style="margin:20px; width:85px;border-width:0px;border:0px;" width="85" alt="addi-logo" title="addi-logo"></div>', unsafe_allow_html=True)
 
     #Estilo botón
     # st.markdown("""
